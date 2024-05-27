@@ -4,10 +4,10 @@ import {useEffect } from 'react';
 const Home = () =>{
   useEffect(() => {
     const visit = localStorage.getItem('visits');
+    localStorage.setItem('visits', parseInt(visit) + 1);
     if (!visit) {
         localStorage.setItem('visits', 1);
     }
-    localStorage.setItem('visits', parseInt(visit) + 1);
   }, []);
 
   return (
