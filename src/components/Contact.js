@@ -6,7 +6,7 @@ const Contact = () => {
     useEffect(() => {
         const visit = localStorage.getItem('visits');
         const number = parseInt(visit);
-        setVisits(number);
+        setVisits(number + 1);
       }, []);
   return (
     <div>
